@@ -1,0 +1,83 @@
+.footer{
+    background-color: rgb(210, 144, 223);
+}
+
+.barra-superior {
+    background-color: rgb(245, 123, 180);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.barra-superior h1 {
+    text-align: center;
+}
+
+.barra-superior2 {
+    background-color: pink;
+    color: white;
+    margin-top: 100px;
+    padding: 10px 20px;
+    height: 80px;
+}
+
+@keyframes color {
+    0% { text-shadow: 0 0 5px violet; }
+    50% { text-shadow: 0 0 20px pink; }
+    100% { text-shadow: 0 0 5px purple; }
+  }
+  
+  .barra-superior h1 {
+    font-size: 50px;
+    animation: color 1s infinite;
+    margin: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .texto-centrado {
+    text-align: center;
+  }
+
+h3 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button {
+background-color: purple;
+color: white; 
+border: none; 
+padding: 10px 20px;
+cursor: pointer;
+border-radius: 5px;
+margin-top: 10px;
+}
+.star {
+        color: black;
+        cursor: pointer;
+}
+.star.selected {
+        color: rgb(180, 28, 226);
+}
+img {
+    width: 100%;
+}
+.text-center {
+   color: blueviolet;
+    text-align: center;
+}
+
+.star-rating {
+    margin-left: 606px;
+}
+#submitButton {
+    margin-left: 575px;  
+}
+#ratingForm {
+    text-align: center;
+}
+
+h2{
+    font-family: cursive;
+}

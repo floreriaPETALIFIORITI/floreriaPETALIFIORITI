@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrito de Compras</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="estilosp.css">
+
+</head>
+<body>
+
+
+<div class="barra-superior">
+    <h1>Productos de ofertas</h1>
+    <button class="mostrar-carrito" onclick="toggleCarrito()"><i class="fas fa-shopping-cart"></i></button>
+</div>
+
+
+
+<div class="carrito" id="carrito">
+    <h2>Carrito de Compras</h2>
+    <ul id="lista-carrito"></ul>
+    <p>Total: <span id="total">$0.00</span></p>
+    
+    <button onclick="toggleCarrito()">Cerrar Carrito</button>
+</div><br>
+
+<div class="contenedor-productos">
+    
+      <div class="producto1">
+     <h3>Ramo de Flores Rosas</h3>
+        <img  src="imagen12.jpg" class="img">
+        <p class="ofertas">Precio: $180.00</p>
+        <button onclick="agregarAlCarrito('Ramo de Flores Rosas', 180.00)">Agregar al Carrito</button>
+    </div>
+    
+    <div class="producto1">
+        <h3>Ramo de Flores Rosa Pastel </h3>
+        <img src="imagen13.jpg">
+        <p class="ofertas">Precio: $175.00</p>
+        <button onclick="agregarAlCarrito('Ramo de Flores Rosa Pastel', 175.00)">Agregar al Carrito</button>
+    </div>
+    <div class="producto1">
+      <h3>Ramo amarillo y morado
+        </h3>
+        <img src="imagen15.jpg">
+        <p class="ofertas">Precio: $150.00</p>
+        <button onclick="agregarAlCarrito('Ramo amarillo y morado', 150.00)">Agregar al Carrito</button>
+    </div>
+    <div class="producto1">
+        <h3>Ramo pequeño con flor rosa</h3>
+        <img src="imagen16.jpg">
+        <p class="ofertas">Precio: $130.00</p>
+        <button onclick="agregarAlCarrito('Ramo pequeño con flor rosa', 130.00)">Agregar al Carrito</button>
+    </div>
+</div><br>
+
+<div class="producto1 producto2">
+    <h3>Ramo con girasoles y otras</h3>
+    <img src="imagen17.jpg">
+    <p class="ofertas">Precio: $160.00</p>
+    <button onclick="agregarAlCarrito('Ramo con girasoles y otras', 160.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+<div class="producto1 producto2">
+    <h3>Gerberas Rosas </h3>
+    <img src="imagen18.jpg">
+    <p class="ofertas"> Precio: $185.00</p>
+    <button onclick="agregarAlCarrito('Gerberas Rosas ', 185.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+<div class="producto1 producto2">
+    <h3>Ramo de girasoles</h3>
+    <img src="imagen19.jpg">
+    <p>Precio: $200.00</p>
+    <button onclick="agregarAlCarrito('Ramo de girasoles', 200.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+<div class="producto1 producto2">
+    <h3>Girasol con rosas</h3>
+    <img src="imagen20.jpg">
+    <p>Precio: $180.00</p>
+    <button onclick="agregarAlCarrito('Girasol con rosas', 180.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+<div class="producto1 producto2">
+    <h3>Flores blancas</h3>
+    <img src="imagen21.jpg">
+    <p>Precio: $170.00</p>
+    <button onclick="agregarAlCarrito('Flores blancas', 170.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+<div class="producto1 producto2">
+    <h3>Ramo mediano de rosas </h3>
+    <img src="imagen22.jpg">
+    <p>Precio: $190.00</p>
+    <button onclick="agregarAlCarrito('Ramo mediano de rosas', 190.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+<div class="producto1 producto2">
+    <h3>Ramo de rosas</h3>
+    <img src="imagen23.jpg">
+    <p>Precio: $230.00</p>
+    <button onclick="agregarAlCarrito('Ramo de rosas', 230.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+<div class="producto1 producto2">
+    <h3>Bote de rosas</h3>
+    <img src="imagen24.jpg">
+    <p class="ofertas">Precio: $130.00</p>
+    <button onclick="agregarAlCarrito('Bote de rosas', 130.00)">Agregar al Carrito</button>
+</div>
+</div>
+<div class="producto1 producto2">
+    <h3>Bote de girasoles con rosas</h3>
+    <img src="imagen25.jpg">
+    <p>Precio: $250.00</p>
+    <button onclick="agregarAlCarrito('Bote de girasoles con rosas', 250.00)">Agregar al Carrito</button>
+</div>
+</div>
+<div class="producto1 producto2">
+    <h3>Bote de tulipanes con rosas</h3>
+    <img src="imagen26.jpg">
+    <p>Precio: $270.00</p>
+    <button onclick="agregarAlCarrito('Bote de tulipanes con rosas', 270.00)">Agregar al Carrito</button>
+</div>
+</div>
+<div class="producto1 producto2">
+    <h3>Ramo grande de flores rosas</h3>
+    <img src="imagen27.jpg">
+    <p>Precio: $290.00</p>
+    <button onclick="agregarAlCarrito('Ramo grande de flores rosas', 290.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+<div class="producto1 producto2">
+    <h3>Bote de rosas</h3>
+    <img src="imagen28.jpg">
+    <p class="ofertas">Precio: $180.00</p>
+    <button onclick="agregarAlCarrito('Bote de rosas', 180.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+<div class="producto1 producto2">
+    <h3>Bote de flores moradas</h3>
+    <img src="imagen29.jpg">
+    <p class="ofertas">Precio: $230.00</p>
+    <button onclick="agregarAlCarrito('Bote de flores moradas', 230.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+<div class="producto1 producto2">
+    <h3>Bote de flores moradas-rosas</h3>
+    <img src="imagen30.jpg">
+    <p>Precio: $200.00</p>
+    <button onclick="agregarAlCarrito('Bote de flores-rosas', 200.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+<div class="producto1 producto2">
+    <h3>Ramo de rosas amarillas</h3>
+    <img src="imagen31.jpg">
+    <p>Precio: $250.00</p>
+    <button onclick="agregarAlCarrito('Ramo de rosas amarillas', 250.00)">Agregar al Carrito</button</div>
+</div>
+
+<div class="producto1 producto2">
+    <h3>Brisa floral</h3>
+    <img src="imagen32.jpg">
+    <p class="ofertas">Precio: $280.00</p>
+    <button onclick="agregarAlCarrito('Brisa floral', 280.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+
+<div class="producto1 producto2">
+    <h3>Girasoles con rosas</h3>
+    <img src="imagen41.jpg">
+    <p>Precio: $280.00</p>
+    <button onclick="agregarAlCarrito('Girasoles con rosas', 280.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+<div class="producto1 producto2">
+    <h3>Bote de rosales</h3>
+    <img src="imagen42.jpg">
+    <p>Precio: $240.00</p>
+    <button onclick="agregarAlCarrito('Bote de rosales', 240.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+
+<div class="producto1 producto2">
+    <h3>Caja de girasolres y rosas</h3>
+    <img src="imagen43.jpg">
+    <p class="ofertas">Precio: $290.00</p>
+    <button onclick="agregarAlCarrito('Caja de girasolres y rosas', 290.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+
+<div class="producto1 producto2">
+    <h3>Cesta de alegria roja</h3>
+    <img src="imagen44.jpg">
+    <p class="ofertas">Precio: $290.00</p>
+    <button onclick="agregarAlCarrito('Cesta de alegria', 290.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+
+<div class="producto1 producto2">
+    <h3>Cesta de alegria rosa</h3>
+    <img src="imagen45.jpg">
+    <p class="ofertas">Precio: $270.00</p>
+    <button onclick="agregarAlCarrito('Cesta de alegria', 270.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+
+<div class="producto1 producto2">
+    <h3>Gerberas con rosas</h3>
+    <img src="imagen46.jpg">
+    <p class="ofertas">Precio: $290.00</p>
+    <button onclick="agregarAlCarrito('Gerberas con rosas', 290.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+
+<div class="producto1 producto2">
+    <h3>Canasta de ensueño</h3>
+    <img src="imagen47.jpg">
+    <p>Precio: $300.00</p>
+    <button onclick="agregarAlCarrito('Canasta de ensueño', 300.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+
+<div class="producto1 producto2">
+    <h3>Caja de gerberas y rosas</h3>
+    <img src="imagen48.jpg">
+    <p>Precio: $280.00</p>
+    <button onclick="agregarAlCarrito('Producto 2', 180.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+
+<div class="producto1 producto2">
+    <h3>Ramo de flores azucenas</h3>
+    <img src="imagen49.jpg">
+    <p class="ofertas">Precio: $250.00</p>
+    <button onclick="agregarAlCarrito('Ramo de flores azucenas', 250.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+
+<div class="producto1 producto2">
+    <h3>Caja de rosales</h3>
+    <img src="imagen50.jpg">
+    <p>Precio: $290.00</p>
+    <button onclick="agregarAlCarrito('Caja de rosales', 290.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+
+<div class="producto1 producto2">
+    <h3>Ramo de rosas-blancas</h3>
+    <img src="imagen51.jpg">
+    <p>Precio: $280.00</p>
+    <button onclick="agregarAlCarrito('Ramo de rosas-blancas', 280.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+
+<div class="producto1 producto2">
+    <h3>Bote de rosas moradas</h3>
+    <img src="imagen52.jpg">
+    <p>Precio: $330.00</p>
+    <button onclick="agregarAlCarrito('Bote de rosas moradas', 330.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+
+<div class="producto1 producto2">
+    <h3>Ramo decorativo</h3>
+    <img src="imagen56.jpg">
+    <p>Precio: $240.00</p>
+    <button onclick="agregarAlCarrito('Ramo decorativo', 240.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+
+<div class="producto1 producto2">
+    <h3>Bote de rosas coloridas</h3>
+    <img src="imagen57.jpg">
+    <p>Precio: $300.00</p>
+    <button onclick="agregarAlCarrito('Bote de rosas coloridas', 300.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+
+<div class="producto1 producto2">
+    <h3>Bote de rosas moradas-blancas</h3>
+    <img src="imagen58.jpg">
+    <p>Precio: $290.00</p>
+    <button onclick="agregarAlCarrito('Caja de rosas moradas-blancas', 290.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+
+<div class="producto1 producto2">
+    <h3>Ramo extrabagante de rosas</h3>
+    <img src="imagen59.jpg">
+    <p class="ofertas">Precio: $350.00</p>
+    <button onclick="agregarAlCarrito('Ramo extrabagante de rosas', 250.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+
+<div class="producto1 producto2">
+    <h3>Ramo de flores eternas-rosas</h3>
+    <img src="imagen60.jpg">
+    <p>Precio: $250.00</p>
+    <button onclick="agregarAlCarrito('Ramo de flores eternas-rosas', 250.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+
+<div class="producto1 producto2">
+    <h3>Ramo decorado con mariposas</h3>
+    <img src="imagen61.jpg">
+    <p>Precio: $280.00</p>
+    <button onclick="agregarAlCarrito('Ramo decorado con mariposas', 280.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+
+<div class="producto1 producto2">
+    <h3>flores eternas rojas-decorada</h3>
+    <img src="imagen62.jpg">
+    <p>Precio: $280.00</p>
+    <button onclick="agregarAlCarrito('flores eternas rojas-decorada', 280.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+
+<div class="producto1 producto2">
+    <h3>Ramo pequeño con decoracion</h3>
+    <img src="imagen63.jpg">
+    <p class="ofertas">Precio: $230.00</p>
+    <button onclick="agregarAlCarrito('Ramo pequeño con decoracion', 230.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+
+<div class="producto1 producto2">
+    <h3>Rosas amarillas</h3>
+    <img src="imagen64.jpg">
+    <p>Precio: $250.00</p>
+    <button onclick="agregarAlCarrito('Rosas amarillas', 250.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+
+<div class="producto1 producto2">
+    <h3>Ramo grande-rosas amarillas</h3>
+    <img src="imagen65.jpg">
+    <p>Precio: $290.00</p>
+    <button onclick="agregarAlCarrito('Ramo grande-rosas amarillas', 290.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+
+<div class="producto1 producto2">
+    <h3>Ramo rosas amarillas</h3>
+    <img src="imagen66.jpg">
+    <p>Precio: $250.00</p>
+    <button onclick="agregarAlCarrito('Ramo rosas amarillas', 250.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+
+<div class="producto1 producto2">
+    <h3>Ramo pequeño de girasoles</h3>
+    <img src="imagen67.jpg">
+    <p class="ofertas">Precio: $230.00</p>
+    <button onclick="agregarAlCarrito('Ramo pequeño de girasoles', 230.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+<div class="producto1 producto2">
+    <h3>Paquete 1</h3>
+    <img src="imagen68.jpg">
+    <p>Precio: $550.00</p>
+    <button onclick="agregarAlCarrito('Paquete 1', 550.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+<div class="producto1 producto2">
+    <h3>Paquete 2 </h3>
+    <img src="imagen69.jpg">
+    <p class="ofertas"></p>Precio: $435.00</p>
+    <button onclick="agregarAlCarrito('Paquete 2', 435.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+<div class="producto1 producto2">
+    <h3>Paquete 3</h3>
+    <img src="imagen70.jpg">
+    <p class="ofertas">Precio: $550.00</p>
+    <button onclick="agregarAlCarrito('Paquete 3', 550.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+<div class="producto1 producto2">
+    <h3>Paquete 4</h3>
+    <img src="imagen71.jpg">
+    <p>Precio: $590.00</p>
+    <button onclick="agregarAlCarrito('Paquete 4', 590.00)">Agregar al Carrito</button>
+</div>
+</div> 
+
+
+<div class="producto1 producto2">
+    <h3>Corazon de rosas blancas</h3>
+    <img src="imagen33.jpg">
+    <p>Precio: $550.00</p>
+    <button onclick="agregarAlCarrito('Corazon de rosas blancas-rojas', 180.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+<div class="producto1 producto2">
+    <h3>Corazon de rosas blancas-rojas</h3>
+    <img src="imagen34.jpg">
+    <p>Precio: $430.00</p>
+    <button onclick="agregarAlCarrito('Corazon de rosas blancas-rojas', 180.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+<div class="producto1 producto2">
+    <h3>Condolecias flores blancas</h3>
+    <img src="imagen35.jpg">
+    <p>Precio: $300.00</p>
+    <button onclick="agregarAlCarrito('Condolecias flores blancas', 300.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+<div class="producto1 producto2">
+    <h3>Flores de condolencias-corazon</h3>
+    <img src="imagen36.jpg">
+    <p>Precio: $550.00</p>
+    <button onclick="agregarAlCarrito('Flores de condolencias-corazon', 550.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+<div class="producto1 producto2">
+    <h3>Gerberas blancas-condolencias</h3>
+    <img src="imagen37.jpg">
+    <p>Precio: $230.00</p>
+    <button onclick="agregarAlCarrito('Gerberas blancas-condolencias', 230.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+<div class="producto1 producto2">
+    <h3>Corona de corazon</h3>
+    <img src="imagen38.jpg">
+    <p>Precio: $690.00</p>
+    <button onclick="agregarAlCarrito('Corona de corazon', 690.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+<div class="producto1 producto2">
+    <h3>Flores azucenas-condolencias</h3>
+    <img src="imagen39.jpg">
+    <p>Precio: $230.00</p>
+    <button onclick="agregarAlCarrito('Flores azucenas-condolencias', 230.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+<div class="producto1 producto2">
+    <h3>Corona colores pateles</h3>
+    <img src="imagen40.jpg">
+    <p>Precio: $690.00</p>
+    <button onclick="agregarAlCarrito('Corona colores pateles', 690.00)">Agregar al Carrito</button>
+</div>
+</div>
+
+
+<script src="carrito.js"></script>
+
+</body>
+</html>

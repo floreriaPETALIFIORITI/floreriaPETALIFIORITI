@@ -1,0 +1,115 @@
+
+.producto1 img {
+    max-width: 200px; /* Puedes ajustar este valor según tus necesidades */
+    width: 200px;
+    height: 200px; /* Esto mantendrá la proporción de la imagen */
+}
+
+.producto1 {
+    border: 2px solid #ccc; /* Reduciendo el grosor del borde */
+    padding: 5px; /* Reduciendo el espacio interno */
+    margin-bottom: 5px; /* Reduciendo el espacio entre los productos */
+    width: 200px; /* Ajusta este valor según tus necesidades */
+}
+
+    .barra-superior {
+        background-color: rgb(245, 123, 180);
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .producto1 {
+        border: 5px solid #f554b7;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    button {
+        background-color: #a136ee;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #f773ec;
+    }
+    .carrito {
+        border: 1px solid #ccc;
+        padding: 10px;
+        display: none; /* Ocultar el carrito por defecto */
+        position: fixed;
+        top: 60px;
+        right: 20px;
+        background-color: #fff;
+        z-index: 1;
+    }
+    .mostrar-carrito {
+        background-color: #b784db;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .producto1 {
+        float: inline-start;
+        margin: 0 20px;
+        margin-top: -10px;
+        width: 250px ;
+    }
+    .producto2 {
+        margin-top: 15px;
+    }
+    p {
+        color: #201111;
+    }
+    
+    .ofertas {
+     color: #db1717;
+    }
+
+
+    @keyframes color {
+    0% { text-shadow: 0 0 5px violet; }
+    50% { text-shadow: 0 0 20px pink; }
+    100% { text-shadow: 0 0 5px purple; }
+}
+
+.barra-superior h1 {
+    font-size: 50px;
+    animation: color 1s infinite;
+    margin: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+#carrito {
+    width: 370px; /* ajusta el ancho del cuadro blanco del carrito según sea necesario */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 0 auto; /* esto centrará el cuadro blanco horizontalmente */
+  }
+  
+  #botonContainer {
+    text-align: center;
+    margin-top: 40px; /* ajusta el margen superior según sea necesario */
+  }
+  
+  #botonOcultarCarrito {
+    font-size: 15px; /* ajusta el tamaño de fuente del botón según sea necesario */
+    padding: 5px 10px; /* ajusta el relleno del botón según sea necesario */
+  }
+
+  button {
+    background-color: rgb(202, 56, 231);
+    color: white; 
+    border: none; 
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    }

@@ -1,0 +1,74 @@
+.imagenc {
+    width: 50%;
+    height: 600px;
+}
+
+.color {
+background-color: rgb(193, 144, 250);
+}
+
+.imagenesp{
+    margin: 0 150px;
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: auto;
+      }
+
+      .card-img-top1 {
+        width: 40%;
+        height: auto;
+      }
+.col-md-3 {
+    margin: 0 auto;
+}
+.imgf2 {
+    width: 306px;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  .cuadro {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(193, 144, 250);
+  }
+
+
+button {
+background-color: rgb(202, 56, 231);
+color: white; 
+border: none; 
+padding: 10px 20px;
+cursor: pointer;
+border-radius: 5px;
+margin-top: 10px;
+}
+
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.linea {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+}
+.linea span {
+    background-color: rgb(193, 144, 250);
+    padding: 0 10px;
+}
+
+.nav-link {
+color: rgb(236, 232, 240);
+}
+
+.dropdown-item {
+  color: rgb(127, 13, 235);
+}
+

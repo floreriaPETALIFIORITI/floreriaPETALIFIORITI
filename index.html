@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="hojacss.css">
+<title>www.petalifioriti.com</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid color">
+          <img src="logo.jpg" width="166px">
+          <button>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  PRODUCTOS
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="productos1.html">Productos</a></li>
+                  <li><a class="dropdown-item" href="contactanos.html">Contactanos</a></li>
+                </ul>
+                 </li>
+            </ul>
+           <button onclick="mostrarFormulario()">Iniciar Sesión</button></h1>
+    
+            <form id="formulario" style="display: none;" onsubmit="enviarDatos(event)">
+                <label for="usuario">Usuario:</label><br>
+                <input type="text" id="usuario" name="usuario"><br>
+                <label for="contrasena">Contraseña:</label><br>
+                <input type="password" id="contrasena" name="contrasena"><br><br>
+                <input type="submit" value="Enviar">
+            </form>
+        
+            <script>
+              function mostrarFormulario() {
+    var formulario = document.getElementById("formulario");
+    formulario.style.display = "block";
+}
+
+function enviarDatos(event) {
+    event.preventDefault(); // Evitar que el formulario se envíe por defecto
+
+    // Mostrar los datos en la consola
+    var usuario = document.getElementById("usuario").value;
+    var contrasena = document.getElementById("contrasena").value;
+    console.log("Usuario:", usuario);
+    console.log("Contraseña:", contrasena);
+
+    // Limpiar los campos del formulario
+    document.getElementById("usuario").value = "";
+    document.getElementById("contrasena").value = "";
+
+    // Ocultar el formulario después de enviar los datos
+    var formulario = document.getElementById("formulario");
+    formulario.style.display = "none";
+}
+
+            </script>
+
+            <button id="shareButton">Compartir</button>
+            
+            <script>
+            document.getElementById('shareButton').addEventListener('click', function() {
+              if (navigator.share) {
+                navigator.share({
+                  title: 'Título de la página',
+                  url: window.location.href
+                })
+                .then(() => console.log('Enlace compartido correctamente.'))
+                .catch((error) => console.error('Error al compartir el enlace:', error));
+              } else {
+                console.log('La funcionalidad de compartir no está soportada en este navegador.');
+              }
+            });
+            </script><br>
+            </div>
+            
+             
+        </div></nav>
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="imagen2.jpg" class="d-block w-100 imagenc" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="imagen1.jpg" class="d-block w-100 imagenc" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="imagen3.jpg" class="d-block w-100 imagenc" alt="...">
+            </div>
+       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+          <br>
+       
+      </head>
+      <body>
+        <div class="cuadro">
+          <form>
+            <label for="cities">Selecciona tu municipio de entrega:</label>
+            <select id="cities" onchange="updateStates()">
+              <option value="León">selecciona</option>
+              <option value="León">León</option>
+              
+            </select>
+            
+            <label for="states">Selecciona tu estado:</label>
+            <select id="states">
+            </select>
+          </form>
+          
+          <button onclick="registrarEstado()">Comenzar</button>
+          <p id="mensaje"></p>
+          
+          <script>
+            function updateStates() {
+              var citySelect = document.getElementById("cities");
+              var stateSelect = document.getElementById("states");
+              stateSelect.innerHTML = "";
+            
+              var city = citySelect.value;
+              var states;
+            
+              
+              if (city === "León") {
+                states = ["Guanajuato"];
+              } 
+              
+              states.forEach(function(state) {
+                var option = document.createElement("option");
+                option.text = state;
+                option.value = state.toLowerCase().replace(/\s+/g, '_');
+                stateSelect.add(option);
+              });
+            }
+            
+            function registrarEstado() {
+              var stateSelect = document.getElementById("states");
+              var selectedState = stateSelect.value;
+              var mensaje = "Se ha registrado su estado como " + selectedState;
+              document.getElementById("mensaje").textContent = mensaje;
+            }
+          </script>
+        </div> <br>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card">
+                <img src="imagen6.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">EJEMPLO DE: FLORES DE OFERTA</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="imagen5.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">EJEMPLO DE: RAMOS GRANDES</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="imagen7.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">EJEMPLO DE: PAQUETE DE CUMPLEAÑOS</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="imagen8.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">EJEMPLO DE: FLORES DE CONDOLENCIAS</p>
+                </div>
+              </div>
+            </div>
+          </div><br>
+          
+        
+        <h1><div class="linea"><span>Razones para confiar en "PETALI FIORITI "</span></div></h1>
+        <br>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card">
+              <img src="imagen9.jpg" class="card-img-top1 imgf2" alt="...">
+              <div class="card-body">
+                <p class="card-text">Mucha variedad</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img src="imagen10.jpg" class="card-img-top1 imgf2" alt="...">
+              <div class="card-body">
+                <p class="card-text">Entrega garantizada</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img src="imagen11.jpg" class="card-img-top1 imgf2" alt="...">
+              <div class="card-body">
+                <p class="card-text">Tenemos experiencia</p>
+              </div>
+            </div>
+          </div>
+           </div>
+          </div>
+        </div><br>
+      
+      
+      
+      </body>
+</html>

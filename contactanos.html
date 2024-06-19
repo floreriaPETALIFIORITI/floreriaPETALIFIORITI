@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>contactanos</title>
+        <link rel="stylesheet" href="contactanos.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <body>
+<div class="barra-superior">
+    <div class="texto-centrado">
+        <h1>Contáctanos</h1>
+        <br>
+      </div>
+</div><br>
+<br> <img src="imagen72.jpg" class="img-fluid">
+    <div id="text">
+        <h3><h2 class="text-center">Califica esta página</h2></h3>
+        <!-- Botón de calificación con 5 estrellas -->
+        <div class="star-rating">
+            <!-- Estrellas vacías -->
+            <span class="star" onclick="giveRating(1)">★</span>
+            <span class="star" onclick="giveRating(2)">★</span>
+            <span class="star" onclick="giveRating(3)">★</span>
+            <span class="star" onclick="giveRating(4)">★</span>
+            <span class="star" onclick="giveRating(5)">★</span>
+        </div>
+        
+        <!-- Botón "Listo para enviar" -->
+        <button id="submitButton" style="display: none;" onclick="showForm()">Listo para enviar</button><br>
+        
+        <!-- Formulario de calificación -->
+        <form id="ratingForm" action="/submit_rating" method="post" onsubmit="return showConfirmationMessage()" style="display: none;">
+            <h2><label for="reason">Explica tu calificación:</label></h2><br>
+            <textarea id="reason" name="reason" rows="4" cols="50"></textarea><br>
+            <input type="hidden" id="ratingValue" name="rating" value="0"> <!-- Campo oculto para almacenar la calificación -->
+            <button type="submit">Enviar</button>
+        </form><br></div>
+        
+        <!-- Mensaje de confirmación -->
+        <h2><center><div id="confirmationMessage" style="display: none;">Calificación enviada</div></center></h2>
+        
+        <script>
+        // Función para asignar la calificación y cambiar el color de las estrellas seleccionadas
+        function giveRating(rating) {
+            // Cambiar el color de las estrellas seleccionadas a amarillo
+            var stars = document.querySelectorAll('.star');
+            stars.forEach(function(star, index) {
+                if (index < rating) {
+                    star.classList.add('selected');
+                } else {
+                    star.classList.remove('selected');
+                }
+            });
+            // Guardar la calificación en un campo oculto
+            document.getElementById("ratingValue").value = rating;
+            // Mostrar el botón "Listo para enviar"
+            document.getElementById("submitButton").style.display = "inline";
+            // Log de la calificación dada
+            console.log('Calificación dada:', rating);
+        }
+        
+        // Función para mostrar el formulario cuando se hace clic en "Listo para enviar"
+        function showForm() {
+            document.getElementById("ratingForm").style.display = "block";
+        }
+        
+        // Función para mostrar el mensaje de confirmación después de enviar la calificación
+        function showConfirmationMessage() {
+            document.getElementById("confirmationMessage").style.display = "block";
+            // Aquí puedes agregar la lógica para enviar la calificación al servidor
+            console.log('Calificación enviada:', document.getElementById("ratingValue").value);
+            // Prevenir el envío del formulario para este ejemplo
+            return false;
+        }
+        </script>
+
+    <!-- Font Awesome para los iconos de redes sociales -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <!-- Barra de pie de página -->
+    <footer class="footer text-white text-center py-3 mt-5">
+        <div class="container">
+            <p>Contáctanos a través de nuestras redes</p>
+            <div class="d-flex justify-content-center">
+                <a href="https://www.facebook.com/profile.php?id=100076594507414&mibextid=ZbWKwL" class="text-white mx-2">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://youtube.com/@johana0.?si=KCd12uNY87zFX9Cz" class="text-white mx-2">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://wa.me/qr/D5L3C5KG2XBTN1" class="text-white mx-2">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    </body>
+    </html>
